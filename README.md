@@ -1,4 +1,4 @@
-# Stock Market Database
+# Financial Reports Database
 
 ### Goals
 - Learn how to build a reproducible database in SQL.

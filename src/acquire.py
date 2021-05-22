@@ -1,3 +1,4 @@
+import numpy as np
 import pandas as pd
 import requests
 import os
@@ -58,19 +59,35 @@ def extract_json(response):
     Extract quarterly data from the Response object
     '''
     data = response.json()
-
-    # annual_data = report.get('annualReports')
     q_data = data.get('quarterlyReports')
 
     return q_data
 
 
-def report_dataframe(data):
+def report_dataframe(data, ticker):
     '''
     Transform the dictionary into a Pandas DataFrame, sorted by `fiscalDateEnding`
     '''
     df = pd.DataFrame(data)
+    df.insert(0, 'ticker', ticker)
+    df.drop(columns='reportedCurrency', inplace=True)
     df = df.sort_values('fiscalDateEnding').reset_index(drop=True)
+    return df
+
+
+def prep_financial_report(df):
+    '''
+    
+    '''
+    date_col = df.columns[1]
+    numeric_cols = df.columns[2:]
+
+    df[date_col] = pd.to_datetime(df.loc[:,date_col])
+    df[numeric_cols] = df.loc[:, numeric_cols].apply(pd.to_numeric,
+                                                     downcast='float',
+                                                     errors='coerce')
+    df.fillna(0, inplace=True)
+    
     return df
 
 
@@ -92,7 +109,9 @@ def check_local_cache(file_name):
     Return False otherwise
     '''    
     if os.path.isfile(file_name):
-        return pd.read_csv(file_name, index_col=False)
+        data = pd.read_csv(file_name, infer_datetime_format=True)
+        data = data.convert_dtypes()
+        return data
     else:
         return False
 
@@ -124,14 +143,15 @@ def get_financial_data(ticker='IBM', report_name='INCOME_STATEMENT'):
     -------
     pandas DataFrame
     '''
-    file_name = f'{ticker.lower()}_{report_name.lower()}.csv'
+    file_name = f'./data/{ticker.lower()}_{report_name.lower()}.csv'
 
     cache = check_local_cache(file_name)
     
     if cache is False:
         response = report_endpoint(report=report_name, ticker=ticker)
         report = extract_json(response)
-        df = report_dataframe(report)
+        df = report_dataframe(report, ticker=ticker)
+        df = prep_financial_report(df)
         df.to_csv(file_name, index=False)
         return df
     else:

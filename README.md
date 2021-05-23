@@ -1,7 +1,6 @@
-# Financial Reports Database
+# World Bank Database
 
 ### Goals
 - Learn how to build a reproducible database in SQL.
-- Practice advanced SQL queries by generating useful reports and constructing portfolios of financial assets.
+- Practice advanced SQL queries by generating reports.
 
-# https://www.alphavantage.co/

@@ -1,4 +1,4 @@
-![header]('.\visuals\World-Bank-Database-Header.png')
+![header](./visuals/World-Bank-Database-Header.png)
 
 ### Goals
 - Learn how to build a reproducible database in SQL.

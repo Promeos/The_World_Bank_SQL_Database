@@ -6,7 +6,7 @@
 - Generate reports.
 
 # How to Reproduce
-- ![Download MySQL Community Edition](https://www.mysql.com/products/community/)
+- ![Download MySQL Workbench](https://dev.mysql.com/downloads/workbench/)
 
 https://user-images.githubusercontent.com/13938069/119899359-a1cad400-bf08-11eb-8620-9149045294ab.mov
 

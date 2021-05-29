@@ -1,5 +1,4 @@
 import pandas as pd
-import numpy as np
 import pymysql
 
 
@@ -8,7 +7,7 @@ def get_contract_data():
     '''
     Returns a dataframe of World Bank contracts.
     '''
-    data = pd.read_csv('.\data\wb_contracts.csv')
+    data = pd.read_csv('./data/raw/wb_contracts.csv')
     return data
 
 
@@ -16,7 +15,7 @@ def get_project_data():
     '''
     Returns a dataframe of World Bank project.
     '''
-    data = pd.read_excel('.\data\wb_projects.xlsx', engine='openpyxl', skiprows=[0, 2])
+    data = pd.read_excel('./data/raw/wb_projects.xlsx', engine='openpyxl', skiprows=[0, 2])
     return data
 
 

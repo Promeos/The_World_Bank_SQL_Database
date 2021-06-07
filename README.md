@@ -6,7 +6,9 @@
 - Generate reports.
 
 ## Background
-The World Bank is an international financial institution that provides loans and grants to the governments of low- and middle-income countries for the purpose of pursuing capital. The Bank may also make loans and demand policy reforms from recipients.
+The World Bank is an international financial institution that provides loans and grants to the governments of low- and middle-income countries for the purpose of pursuing capital. It comprises two institutions: the International Bank for Reconstruction and Development (IBRD), and the International Development Association (IDA).
+
+Together, IBRD and IDA form the World Bank, which provides financing, policy advice, and technical assistance to governments of developing countries.  IDA focuses on the world’s poorest countries, while IBRD assists middle-income and creditworthy poorer countries.  
 
 [world-bank-wiki](https://en.wikipedia.org/wiki/World_Bank)
 

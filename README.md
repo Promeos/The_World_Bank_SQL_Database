@@ -5,6 +5,12 @@
 - Practice advanced SQL queries.
 - Generate reports.
 
+## Background
+The World Bank is an international financial institution that provides loans and grants to the governments of low- and middle-income countries for the purpose of pursuing capital. The Bank may also make loans and demand policy reforms from recipients.
+
+[world-bank-wiki](https://en.wikipedia.org/wiki/World_Bank)
+
+
 # How to Reproduce
 - ![Download MySQL Workbench](https://dev.mysql.com/downloads/workbench/)
 

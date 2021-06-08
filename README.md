@@ -1,6 +1,6 @@
 ![header](./visuals/World-Bank-Database-Header.png)
 
-> <span style="font-size:12px;">*This project isn't endorsed by The World Bank and doesn't reflect the views or opinions of The World Bank. The World Bank, and all associated properties are trademarks or registered trademarks of The World Bank.*</span>
+> <span style="font-size:2px;">*This project isn't endorsed by The World Bank and doesn't reflect the views or opinions of The World Bank. The World Bank, and all associated properties are trademarks or registered trademarks of The World Bank.*</span>
 
 <h2>Goals</h2>
 

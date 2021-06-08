@@ -2,6 +2,8 @@
 USE worldbank;
 
 
+SHOW VARIABLES LIKE "secure_file_priv";
+
 -- What tables are available inside of the worldbank database?
 SHOW TABLES;
  
@@ -20,8 +22,9 @@ LIMIT 5;
 
 
 -- How many records are in the `contracts` table?
-SELECT COUNT(*) AS total_records
- FROM contracts;
+SELECT
+	COUNT(*) AS total_records
+FROM contracts;
 
 
 -- How many contracts have been approved by the World Bank?

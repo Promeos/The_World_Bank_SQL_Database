@@ -15,8 +15,6 @@
 - Determine which countries have a positive net credit with The World Bank.
 - Determine the top 5 economic sectors funded in each region.
 
-<br>
-
 ## Background
 
 ### The World Bank
